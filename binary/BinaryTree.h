@@ -7,12 +7,13 @@
 
 
 #include "BinaryTreeNode.h"
+#include "BinaryTreeIterator.h"
 
 class BinaryTree {
 public:
     int size();
     bool empty();
-    BinaryTreeNode getRoot();
+    BinaryTreeIterator getRoot();
 private:
     BinaryTreeNode * root;
 };
