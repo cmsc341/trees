@@ -5,9 +5,13 @@
 #ifndef TREES_REGULARNODE_H
 #define TREES_REGULARNODE_H
 
-
+#include<vector>
+using namespace std;
 class RegularNode {
 private:
+    RegularNode *parent;
+    vector<RegularNode *> children;
+    int data;
 };
 
 

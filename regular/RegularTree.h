@@ -7,6 +7,7 @@
 
 
 #include "RegularNode.h"
+#include "RegularNodeIterator.h"
 
 class RegularTree {
 public:
