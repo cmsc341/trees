@@ -14,6 +14,7 @@ public:
     int size();
     bool empty();
     BinaryTreeIterator getRoot();
+
 private:
     BinaryTreeNode * root;
 };

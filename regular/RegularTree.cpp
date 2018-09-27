@@ -3,3 +3,7 @@
 //
 
 #include "RegularTree.h"
+
+vector<RegularNodeIterator> RegularTree::preorderTraverse() {
+    return RegularNodeIterator(root).preorderTraverse();
+}

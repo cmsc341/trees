@@ -3,3 +3,5 @@
 //
 
 #include "RegularNodeIterator.h"
+
+RegularNodeIterator::RegularNodeIterator(RegularNode *node) : node(node) {}
