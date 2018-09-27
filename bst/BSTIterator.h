@@ -6,8 +6,14 @@
 #define TREES_BSTITERATOR_H
 
 
-class BSTIterator {
+#include "BSTNode.h"
 
+class BSTIterator {
+public:
+    BSTIterator(BSTNode *node);
+
+private:
+    BSTNode * andrewIsAnnoyedAndThisIsHisNode;
 };
 
 

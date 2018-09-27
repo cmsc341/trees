@@ -3,3 +3,6 @@
 //
 
 #include "BSTIterator.h"
+
+BSTIterator::BSTIterator(BSTNode *node) : andrewIsAnnoyedAndThisIsHisNode(
+        node) {}
