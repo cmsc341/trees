@@ -3,3 +3,13 @@
 //
 
 #include "BSTIterator.h"
+
+BSTIterator::BSTIterator(BSTNode *saraNoAYYchsNode) : saraNoAYYchsNode(saraNoAYYchsNode) {}
+
+BSTIterator BSTIterator::left() {
+    return BSTIterator(saraNoAYYchsNode->childNumberOne);
+}
+
+BSTIterator BSTIterator::right() {
+    return BSTIterator(saraNoAYYchsNode->childNumberRight);
+}
