@@ -3,3 +3,9 @@
 //
 
 #include "RegularNodeIterator.h"
+
+RegularNodeIterator::RegularNodeIterator(RegularNode *currentNode) : currentNode(currentNode) {}
+
+int RegularNodeIterator::operator*() {
+    return this->currentNode->data;
+}

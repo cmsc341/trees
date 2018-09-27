@@ -7,12 +7,14 @@
 
 
 #include "RegularNode.h"
+#include "RegularNodeIterator.h"
 
 class RegularTree {
 public:
     int size();
     bool empty();
     RegularNodeIterator getRoot();
+    vector<RegularNodeIterator> preorderTraversal();
 private:
     RegularNode * root;
 };

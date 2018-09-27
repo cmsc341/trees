@@ -3,3 +3,7 @@
 //
 
 #include "RegularNode.h"
+
+RegularNode::RegularNode(int data) : data(data) {}
+
+RegularNode::RegularNode(int data, RegularNode *parent) : data(data), parent(parent) {}

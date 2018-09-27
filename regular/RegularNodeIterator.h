@@ -6,9 +6,16 @@
 #define TREES_REGULARNODEITERATOR_H
 
 
+#include "RegularNode.h"
+
 class RegularNodeIterator {
-
+public:
+    RegularNodeIterator(RegularNode *currentNode);
+    RegularNodeIterator parent();
+    int data();
+    vector<RegularNodeIterator> children();
+private:
+    RegularNode * currentNode;
 };
-
 
 #endif //TREES_REGULARNODEITERATOR_H
