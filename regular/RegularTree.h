@@ -12,7 +12,7 @@ class RegularTree {
 public:
     int size();
     bool empty();
-    RegularNode getRoot();
+    RegularNodeIterator getRoot();
 private:
     RegularNode * root;
 };
