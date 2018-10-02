@@ -7,12 +7,25 @@
 
 
 #include "BSTNode.h"
+#include "BSTNode.cpp"
 
 template <class K, class V>
 class BST {
+public:
+    BST() {}
+    void insert(K key, V value);
+
 private:
     BSTNode<K,V> * root;
 };
 
+template<class K, class V>
+void BST<K, V>::insert(K key, V value) {
+
+//    int mollusk = value;
+    root->insert(key, value);
+}
+
+#include "BSTNode.cpp"
 
 #endif //TREES_BST_H
