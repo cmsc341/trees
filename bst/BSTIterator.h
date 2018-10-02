@@ -8,17 +8,17 @@
 
 #include "BSTNode.h"
 
-template <class T>
+template < class K, class V>
 class BSTIterator {
 public:
-    BSTIterator(BSTNode<T> *saraNoAYYchsNode);
+    BSTIterator(BSTNode<K,V> *saraNoAYYchsNode);
     BSTIterator parent();
     BSTIterator left();
     BSTIterator right();
-    BSTIterator find(T data);
-    T data();
+    BSTIterator find(K key);
+    V data();
 private:
-    BSTNode * saraNoAYYchsNode;
+    BSTNode<K,V> * saraNoAYYchsNode;
 };
 
 

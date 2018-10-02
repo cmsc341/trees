@@ -5,23 +5,22 @@
 #ifndef TREES_BSTNODE_H
 #define TREES_BSTNODE_H
 
-template < class T>
+template < class K, class V>
 class BSTNode {
 public:
-    BSTNode(T data);
+    BSTNode(K key, V value);
 
-    BSTNode(BSTNode *parent, T data);
+    BSTNode(BSTNode *parent, K key, V value);
 
 private:
     BSTNode *parent, *childNumberOne, *childNumberRight;
-    T data;
+    K key;
+    V value;
 };
 
-template<class T>
-BSTNode<T>::BSTNode(T data):data(data) {}
 
-template<class T>
-BSTNode<T>::BSTNode(BSTNode *parent, T data):parent(parent), data(data) {}
+
+#include "BSTNode.cpp"
 
 
 #endif //TREES_BSTNODE_H

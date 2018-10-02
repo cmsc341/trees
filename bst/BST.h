@@ -7,16 +7,17 @@
 
 
 #include "BSTNode.h"
+#include "BSTIterator.h"
 #include <vector>
 using namespace std;
-template <class T>
+template <class K, class V>
 class BST {
 public:
     BST();
-    void insert(T data);
-    vector<BSTIterator> sortedData();
+    void insert(K key, V value);
+    vector<BSTIterator<K, V>> sortedData();
 private:
-    BSTNode root;
+    BSTNode<K, V> root;
 };
 
 

@@ -4,4 +4,5 @@
 
 #include "BST.h"
 
-BST::BST() {}
+template <class K, class V>
+BST<K,V>::BST() {}

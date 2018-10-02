@@ -4,12 +4,15 @@
 
 #include "BSTIterator.h"
 
-BSTIterator::BSTIterator(BSTNode *saraNoAYYchsNode) : saraNoAYYchsNode(saraNoAYYchsNode) {}
+template < class K, class V>
+BSTIterator<K,V>::BSTIterator(BSTNode<K,V> *saraNoAYYchsNode) : saraNoAYYchsNode(saraNoAYYchsNode) {}
 
-BSTIterator BSTIterator::left() {
+template < class K, class V>
+BSTIterator<K,V> BSTIterator<K,V>::left() {
     return BSTIterator(saraNoAYYchsNode->childNumberOne);
 }
 
-BSTIterator BSTIterator::right() {
+template < class K, class V>
+BSTIterator<K,V> BSTIterator<K,V>::right() {
     return BSTIterator(saraNoAYYchsNode->childNumberRight);
 }
