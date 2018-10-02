@@ -10,9 +10,11 @@
 #include "BSTNode.cpp"
 
 template <class K, class V>
+class BSTNode;
+template <class K, class V>
 class BST {
 public:
-    BST() {}
+    BST() {root = nullptr;}
     void insert(K key, V value);
 
 private:
