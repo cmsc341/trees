@@ -4,18 +4,18 @@
 
 #include "BST.h"
 
-template <class T>
-BST<T>::BST() {
+template <class K, class V>
+BST<K, V>::BST() {
     root = 0;
 }
 
-template<class T>
-void BST<T>::insert(T data) {
+template <class K, class V>
+void BST<K, V>::insert(K key, V value) {
     if (root == 0) {
-        root = new BSTNode<T>(data);
+        root = new BSTNode<K, V>(key, value);
         return;
     }
-    root.insert(data);
+    root.insert(key, value);
 }
 //    while () {
 //        to check stuff.com;

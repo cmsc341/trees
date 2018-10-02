@@ -7,13 +7,13 @@
 
 
 #include "BSTNode.h"
-template <class T>
+template <class K, class V>
 class BST {
 public:
     BST();
-    void insert(T data);
+    void insert(K key, V value);
 private:
-    BSTNode<T> *  root;
+    BSTNode<K, V> *  root;
 };
 #include "BSTNode.cpp"
 

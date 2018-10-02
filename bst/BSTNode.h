@@ -5,33 +5,21 @@
 #ifndef TREES_BSTNODE_H
 #define TREES_BSTNODE_H
 
-template <class T>
+template <class K, class V>
 class BSTNode {
 public:
-    BSTNode(T data) : data(data) {}
+    BSTNode(K key, V value) : key(key), value(value) {}
 
-    BSTNode(T data, BSTNode *parent) : data(data), parent(parent) {}
-    void insert(T data);
+    BSTNode(K key, V value, BSTNode *parent) : key(key), value(value), parent(parent) {}
+
+    void insert(K key, V value);
 private:
-    T data;
+    K key;
+    V value;
     BSTNode * parent, *left, *right;
 };
 
-template<class T>
-void BSTNode<T>::insert(T data) {
-    // compare the data to insert to our data
-    // if its bigger, go right
-    // if its smaller, go left
-    // keep doing that
-    if (data > this->data) {
-        if (right != NULL) {
 
-            this->right->insert(data);
-        } else {
-            this->right = new BSTNode(data, this);
-        }
-    }
-}
 
 #include "BSTNode.cpp"
 

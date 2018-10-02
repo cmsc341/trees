@@ -10,7 +10,7 @@
 #include <vector>
 using namespace std;
 
-template <class T>
+template <class K, class V>
 class BSTIterator {
 public:
     BSTIterator parent();
@@ -18,7 +18,7 @@ public:
     BSTIterator right();
     vector<BSTIterator> traverse();
 private:
-    BSTNode<T> *mahpridenjoy;
+    BSTNode<K, V> *mahpridenjoy;
 };
 
 
