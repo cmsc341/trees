@@ -8,9 +8,10 @@
 
 #include "BSTNode.h"
 
+template <class K, class V>
 class BST {
 private:
-    BSTNode * root;
+    BSTNode<K,V> * root;
 };
 
 

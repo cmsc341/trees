@@ -8,12 +8,13 @@
 
 #include "BSTNode.h"
 
+template <class K, class V>
 class BSTIterator {
 public:
-    BSTIterator(BSTNode *node);
+    BSTIterator(BSTNode<K, V> *node);
 
 private:
-    BSTNode * andrewIsAnnoyedAndThisIsHisNode;
+    BSTNode<K, V> * andrewIsAnnoyedAndThisIsHisNode;
 };
 
 

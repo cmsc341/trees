@@ -4,5 +4,6 @@
 
 #include "BSTIterator.h"
 
-BSTIterator::BSTIterator(BSTNode *node) : andrewIsAnnoyedAndThisIsHisNode(
+template <class K, class V>
+BSTIterator<K, V>::BSTIterator(BSTNode<K, V> *node) : andrewIsAnnoyedAndThisIsHisNode(
         node) {}

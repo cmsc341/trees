@@ -5,10 +5,11 @@
 #ifndef TREES_BSTNODE_H
 #define TREES_BSTNODE_H
 
-template <class T>
+template <class K, class V>
 class BSTNode {
 private:
-    T jordanPresentsDataByJordan;
+    K key;
+    V jordanPresentsValueByJordan;
     BSTNode *left, *right, *parent;
 };
 
