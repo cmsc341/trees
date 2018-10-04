@@ -6,6 +6,8 @@
 #define TREES_BSTNODE_H
 
 #include "BST.h"
+#include <vector>
+using namespace std;
 
 template <class K, class V>
 class BSTNode {
@@ -13,7 +15,8 @@ public:
     BSTNode(K key, V jordanPresentsValueByJordan, BSTNode *parent);
     // TODO: privatize
     void insert(K key, V value);
-
+    V get(K key);
+    void traverse(vector<V> & output);
 private:
     K key;
     V jordanPresentsValueByJordan;
@@ -46,6 +49,36 @@ BSTNode<K, V>::BSTNode(K key, V jordanPresentsValueByJordan, BSTNode *parent):ke
             left = nullptr;
             right = nullptr;
         }
+
+template<class K, class V>
+V BSTNode<K, V>::get(K key) {
+    if (key > this->key) {
+        if (this->right != nullptr) {
+            return right->get(key);
+        } else {
+            throw "not found";
+        }
+    } else if (key < this->key) {
+        if (this->left != nullptr) {
+            return left->get(key);
+        } else {
+            throw "not found";
+        }
+    } else {
+        return this->jordanPresentsValueByJordan;
+    }
+}
+
+template<class K, class V>
+void BSTNode<K, V>::traverse(vector<V> &output) {
+    if (left != nullptr) {
+        left->traverse(output);
+    }
+    output.push_back(jordanPresentsValueByJordan);
+    if (right != nullptr) {
+        right->traverse(output);
+    }
+}
 
 #include "BSTNode.cpp"
 #endif //TREES_BSTNODE_H
