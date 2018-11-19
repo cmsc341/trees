@@ -15,9 +15,11 @@ public:
     BSTNode(K key, V value, BSTNode *parent) : key(key), value(value), parent(parent) {}
 
     void insert(K key, V value);
+    int height();
     vector<V> sorted();
     V get(K key);
 private:
+    void trinode();
     K key;
     V value;
     BSTNode * parent, *left, *right;
@@ -95,6 +97,46 @@ vector<V> BSTNode<K, V>::sorted() {
     }
 
     return output;
+}
+
+template<class K, class V>
+void BSTNode<K, V>::trinode() {
+    // this = the node that was just added/deleted
+    BSTNode<K,V> * z = this;
+    while (!(
+            z->left != NULL &&
+            z->right != NULL &&
+            abs(z->left->height() - z->right->height()) > 1 //abs because just care about difference
+      )){
+        if (z->parent == NULL){
+            return;
+        }
+        z = z->parent;  // i = i + 1
+    }
+
+    // z should be imbalanced ancestor of this
+    BSTNode<K,V> * y;
+    if (z->left->height() > z->right->height()) {
+        y = z->left;
+    } else {
+        y = z->right;
+    }
+    // now x is taller y child
+    BSTNode<K,V> * x;
+    if (y->left->height() > y->right->height()) {
+        x = y->left;
+    } else {
+        x = y->right;
+    }
+
+    BSTNode<K,V> * a, b, c;
+    // TODO: code that makes a the smallest of (x, y, z)
+    // b, the middle, and c, the max
+
+    BSTNode<K,V> * t0, t1, t2, t3;
+
+    t0 = a->left;
+
 }
 
 #include "BSTNode.cpp"
