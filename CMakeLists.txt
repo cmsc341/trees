@@ -24,3 +24,13 @@ add_executable(trees
         bst/BSTNode.h
         bst/BSTNode.cpp
         )
+
+add_executable(bst
+        bst/BST.cpp
+        bst/BST.h
+        bst/BSTNode.h
+        bst/BSTNode.cpp
+        bst/BSTIterator.h
+        bst/BSTIterator.cpp
+        bst/driver.cpp
+        )
