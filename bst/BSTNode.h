@@ -7,7 +7,14 @@
 
 
 class BSTNode {
+private:
+    int m_data;
+    BSTNode * m_left, * m_right, * m_parent;
 
+public:
+    BSTNode(int i, BSTNode * parent);
+
+    void insert(int i);
 };
 
 

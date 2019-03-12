@@ -14,6 +14,7 @@ int main() {
 
     BST randomTree;
     for (int j = 0; j < 100; ++j) {
-        tree.insert(rand() % 1000);
+        randomTree.insert(rand() % 1000);
     }
+    int x = 1;
 }

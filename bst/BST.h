@@ -6,8 +6,15 @@
 #define TREES_BST_H
 
 
-class BST {
+#include "BSTNode.h"
 
+class BST {
+    BSTNode * root;
+public:
+    BST();
+
+public:
+    void insert(int i);
 };
 
 
