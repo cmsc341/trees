@@ -15,6 +15,10 @@ public:
 
 public:
     void insert(int i);
+
+    bool find(int i);
+
+    void remove(int i);
 };
 
 

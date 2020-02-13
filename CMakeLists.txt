@@ -3,14 +3,9 @@ project(trees)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(trees
+add_executable(binary
     main.cpp
-        regular/RegularNode.cpp
-        regular/RegularNode.h
-        regular/RegularTree.cpp
-        regular/RegularTree.h
-        regular/RegularNodeIterator.h
-        regular/RegularNodeIterator.cpp
+
         binary/BinaryTree.cpp
         binary/BinaryTree.h
         binary/BinaryTreeNode.cpp
@@ -24,6 +19,14 @@ add_executable(trees
         bst/BSTNode.h
         bst/BSTNode.cpp
         )
+
+add_executable(regular
+        regular/RegularNode.cpp
+        regular/RegularNode.h
+        regular/RegularTree.cpp
+        regular/RegularTree.h
+        regular/RegularNodeIterator.h
+        regular/RegularNodeIterator.cpp)
 
 add_executable(bst
         bst/BST.cpp

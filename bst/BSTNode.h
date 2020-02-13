@@ -14,7 +14,19 @@ private:
 public:
     BSTNode(int i, BSTNode * parent);
 
-    void insert(int i);
+    void insert(int dataToInsert);
+
+    bool find(int i);
+
+    void remove(int dataToRemove);
+
+    void removeMe();
+
+    std::vector<BSTNode> cousins():
+
+    BSTNode *getSuccessor();
+
+    void swapWith(BSTNode *swapBuddy);
 };
 
 

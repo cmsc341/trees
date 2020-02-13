@@ -15,3 +15,17 @@ void BST::insert(int i) {
 BST::BST() {
     root = nullptr;
 }
+
+bool BST::find(int i) {
+    if (not root) {
+        return false;
+    }
+    return root->find(i);
+}
+
+void BST::remove(int i) {
+    if (not root) {
+        // this would be bad
+    }
+    root->remove(i);
+}
