@@ -6,8 +6,18 @@
 #define TREES_BINARYTREEITERATOR_H
 
 
-class BinaryTreeIterator {
+#include "BinaryTreeNode.h"
 
+class BinaryTreeIterator {
+public:
+  void up();
+
+  void left();
+
+  void right();
+
+private:
+  BinaryTreeNode *node;
 };
 
 

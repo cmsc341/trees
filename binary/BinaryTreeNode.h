@@ -3,7 +3,12 @@
 
 
 class BinaryTreeNode {
+public:
+    BinaryTreeNode(int data, BinaryTreeNode *parent);
 
+private:
+    int data;
+    BinaryTreeNode *parent, *left, *right;
 };
 
 

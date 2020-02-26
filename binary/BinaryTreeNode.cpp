@@ -3,3 +3,5 @@
 //
 
 #include "BinaryTreeNode.h"
+
+BinaryTreeNode::BinaryTreeNode(int data, BinaryTreeNode *parent= nullptr) : data(data), parent(parent) {}

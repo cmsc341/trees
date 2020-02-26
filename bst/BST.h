@@ -6,7 +6,18 @@
 #define TREES_BST_H
 
 
+#include "BSTNode.h"
+class BSTNode;
+
 class BST {
+public:
+  BST();
+  void insert(int data);
+
+  void remove(int i);
+
+private:
+  BSTNode * root;
 
 };
 
