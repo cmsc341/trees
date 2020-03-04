@@ -14,6 +14,9 @@ public:
   BST();
 
   void insert(int data);
+
+  void dump();
+
 private:
   BSTNode *root;
 };

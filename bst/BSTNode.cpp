@@ -3,7 +3,9 @@
 //
 
 #include "BSTNode.h"
+#include <iostream>
 
+using namespace std;
 BSTNode::BSTNode(BSTNode *parent, int data) {
   _parent = parent;
   _left = nullptr;
@@ -54,4 +56,18 @@ void BSTNode::swap(BSTNode *other) {
   temp = other->_parent;
   other->_parent = _parent;
   _parent = temp;
+}
+
+void BSTNode::dump() {
+  //LVR
+  //L
+  if (_left != nullptr) {
+    _left->dump();
+  }
+  //V
+  cout << _data << " ";
+  //R
+  if (_right != nullptr) {
+    _right->dump();
+  }
 }

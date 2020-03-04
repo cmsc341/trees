@@ -15,4 +15,5 @@ int main() {
     tree.insert(27);
     tree.insert(42);
     tree.insert(101);
+    tree.dump();
 }

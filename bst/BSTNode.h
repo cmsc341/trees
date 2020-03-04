@@ -13,6 +13,9 @@ public:
 
   void insert(int data);
   void swap(BSTNode * other);
+
+  void dump();
+
 private:
   BSTNode * subtreeSuccessor();
   BSTNode * _parent, *_left, *_right;

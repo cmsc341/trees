@@ -3,7 +3,9 @@
 //
 
 #include "BST.h"
+#include <iostream>
 
+using namespace std;
 void BST::insert(int data) {
   if (root == nullptr) {
     root = new BSTNode(nullptr, data);
@@ -14,4 +16,9 @@ void BST::insert(int data) {
 
 BST::BST() {
   root = nullptr;
+}
+
+void BST::dump() {
+  root->dump();
+  cout << endl;
 }
