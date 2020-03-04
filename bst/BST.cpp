@@ -3,3 +3,15 @@
 //
 
 #include "BST.h"
+
+void BST::insert(int data) {
+  if (root == nullptr) {
+    root = new BSTNode(nullptr, data);
+  } else {
+    root->insert(data);
+  }
+}
+
+BST::BST() {
+  root = nullptr;
+}
