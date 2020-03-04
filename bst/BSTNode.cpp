@@ -3,6 +3,9 @@
 //
 
 #include "BSTNode.h"
+#include <iostream>
+
+using namespace std;
 
 BSTNode::BSTNode(BSTNode *parent, int data) : parent(parent), data(data) {
   left = nullptr;
@@ -68,4 +71,18 @@ BSTNode *BSTNode::descendantSuccessor() {
     curr = curr->left;
   }
   return curr;
+}
+
+void BSTNode::dump() {
+  //LVR
+  //L
+  if (left != nullptr) {
+    left->dump();
+  }
+  //V
+  cout << data << endl;
+  //R
+  if (right != nullptr) {
+    right->dump();
+  }
 }

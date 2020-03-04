@@ -15,6 +15,8 @@ int main() {
         tree.insert(i % 25 * -7 + 2);
     }
 
+    tree.dump();
+
     tree.remove(-159);
     cout << "Done." << endl;
 }

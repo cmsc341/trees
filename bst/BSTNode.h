@@ -23,6 +23,8 @@ private:
   void swapWith(BSTNode *other);
 
   BSTNode *descendantSuccessor();
+
+  void dump();
 };
 
 

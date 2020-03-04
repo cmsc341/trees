@@ -16,6 +16,8 @@ public:
 
   void remove(int i);
 
+  void dump();
+
 private:
   BSTNode * root;
 
